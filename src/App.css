@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-logo-style-white{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+.main-logo-style-black{
+    font-family: 'Dancing Script', cursive;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.home{
+    background-image: linear-gradient(to bottom right, #0f1012, #181b90) !important;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.appbar{
+    z-index: 500;
+}
+
+#tsparticles{
+    z-index: 50000;
+}
+
+.main-container{
+    height: 100vh;
+    position: relative;
+}
+.menu-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #0f1012, #181b90) !important;
+    transform: translateX(-120%);
+    transition: transform .5s ease-in-out ;
+    z-index: 500;
+}
+
+.menu-container.show{
+    transform: translateX(0%);
+}
+
+.noto{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main-logo{
+    width: 170px;
+}
+.explore-btn{
+    height:75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: .3s ease-in all;
+    font-size: 13px;
+    background-color: transparent;
+    color: white;
+}
+.explore-btn:hover{
+    background-color: white;
+    color: #1C72B8;
+}
+.heading-adaptive{
+    color: #1C72B8;
+}
+.heading-para{
+    width: 75%;
+    font-size: 18px;
+    font-weight: 300;
+}
+.menu-icon{
+    cursor: pointer;
+    position: fixed;
+    top: 49%;
+    left: 50px;
+    z-index: 1000;
+    transition: .5s all ease-in;
+}
+.menu-icon div{
+    height: 2px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    margin: 5px 0;
+    transition: .5s all ease-in;
+}
+.menu-icon.dark div{
+    background-color: black;
+}
+.ml-10{
+    margin-left: 120px;
+}
+
+
+.menu-icon.open small{
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.menu-icon.open div{
+    margin: 0;
+}
+.menu-icon.open .first{
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+.menu-icon.open .second{
+    display: none;
+    transition: display 1s ease-in;
+}
+.menu-icon.open .third{
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.menu-links{
+    margin-bottom: -250px;
+    transition: margin .2s ease-in-out;
+    opacity: 0;
+}
+.menu-links.show{
+    margin-bottom: 130px;
+    transition: margin .2s ease-in-out;
+    opacity: 1;
+}
+.menu-links a{
+    text-decoration: none ;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    padding-right: 25px;
+}
+
+.explore-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: all .3s ease-in;
+}
+
+.explore-container.show{
+    transform: translateY(0%);
+}
+
+
+.menu-links a:hover{
+    color: #1C72B8;
+    transition: .3s all ease-in;
+}
+
+.text-black{
+    color: black;
+}
+.menu-icon-small{
+    transition: .5s all ease-in;
+    z-index: 500;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon-small.dark div{
+    background-color: black;
+}
+.menu-icon-small div{
+    height: 1px ;
+    background-color: white;
+    width: 30px;
+    margin: 5px 0;
+    transition: .5s all ease-in;
+}
+.menu-icon-small.open div{
+    margin: 0;
+}
+.menu-icon-small.open .first{
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+.menu-icon-small.open .second{
+    display: none;
+    transition: display 1s ease-in;
+}
+.menu-icon-small.open .third{
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.contact-us-form div label{
+    font-size: 18px;
+    display: block;
+}
+
+.contact-us-form div{
+    margin: 20px 0 ;
+}
+
+.contact-us-form div input{
+    width: 100%;
+    padding: 5px;
+    border:none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+.contact-us-form div button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border : 1px solid gray;
+    transition: .5s ease-in-out;
+}
+
+.contact-us-form div button:disabled{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.contact-us-form div button:disabled:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.contact-us-form div button:hover{
+    background-color: black;
+    color: white;
+}
+.contact-us-form div textarea{
+    height: 100px;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+
+.our-mission div{
+    width: 50%;
+}
+.single-product {
+    position: relative;
+    transition: .5s all ease-in-out;
+    overflow: hidden;
+}
+.single-product img{
+    height: 350px;
+    width: 100%;
+    transition: .5s all ease-in-out;
+
+}
+.single-product .absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: .5s all ease-in-out;
+    transform: translateY(-120%);
+}
+.single-product:hover .absolute{
+    transform: translateY(0%);
+}
+.single-product:hover .product-heading{
+    display: none;
+    transition: .5s all ease-in-out;
+
+}
+.single-product:hover img{
+    height: 390px;
+}
+
+@media (max-width : 1200px) {
+    
+    .menu-icon div{
+        width: 40px;
+    }
+    .heading-para{
+        width: 100%;
+    }
+    .menu-links.show{
+        margin-bottom: 130px;
+    }
+    .menu-links a{
+        font-size: 20px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width : 768px) {
+    .menu-icon-small{
+        display: block;
+    }
+   .menu-icon{
+    display: none;
+   }
+    .menu-icon div{
+        width: 30px;
+    }
+    .heading-para{
+        width: 100%;
+    }
+    .menu-links a{
+        font-size: 35px;
+        display: block;
+    }
+    .ml-10{
+        margin-left: 0;
+    }
+    .menu-icon small{
+        display: none;
+    }
+    .contact-us-form div label{
+        font-size: 18px;
+    }
+    .our-mission div{
+        width: 100%;
+    }
+    .single-product img{
+        height: 280px;
+        width: 100%;
+    }
+    .single-product:hover img{
+        height: 310px;
+    }
+    
+    
+}
+
+@media (max-width : 576px) {
+    
+    .main-logo{
+        width: 100px;
+    }
+    .menu-icon div{
+        width: 30px;
+    }
+    .heading-para{
+        width: 100%;
+    }
+    .menu-links a{
+        font-size: 35px;
+        display: block;
+    }
+    .contact-us-form div label{
+        font-size: 16px;
+    }
+    .single-product img{
+        height: 250px;
+        width: 100%;
+    }
+    .single-product:hover img{
+        height: 280px;
+    }
+
+    .main-logo-style-white{
+        font-size: 20px;
+    }
+
+    .main-logo-style-black{
+        font-size: 20px;
+    }
+    
+}
+
+
